@@ -88,6 +88,10 @@ defmodule Dispatcher do
     Proxy.forward conn, [], "http://uuid-generation/run"
   end
 
+  match "/rdfa-harvest/*path", @any do
+    Proxy.forward conn, path, "http://rdfa-harvest/"
+  end
+
   #################
   # prometheus reporting
   #################

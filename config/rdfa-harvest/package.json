@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@lblod/mu-auth-sudo": "^1.1.0",
+    "rdfa-streaming-parser": "^3.0.2"
+  }
+}

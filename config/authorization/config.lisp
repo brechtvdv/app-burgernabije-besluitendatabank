@@ -49,6 +49,10 @@
 (define-graph organisations ("http://mu.semte.ch/graphs/organisations")
   (_ -> _))
 
+;; app-decide's database keeps the governing body labels here
+(define-graph organizations ("http://mu.semte.ch/graphs/organizations")
+  (_ -> _))
+
 
 
 (supply-allowed-group "public")
@@ -79,6 +83,10 @@
 
 (grant (read)
   :to-graph (organisations)
+  :for-allowed-group "public")
+
+(grant (read)
+  :to-graph (organizations)
   :for-allowed-group "public")
 
 ;; increase the default read timeout. this allows waiting heavier queries
